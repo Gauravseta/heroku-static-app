@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>SYNTAX</title>
+<style>
+	.flex-container {
+		display:flex;
+		flex-direction:row;
+		background-color:gray;
+		flex-wrap:wrap;
+		justify-content:flex-start;
+		align-items:stretch;
+		height:200px;
+	}
+	.flex-item {
+		background-color:red;
+		padding:10px;
+		color:white;	
+	}
+</style>
+<script src="../node_modules/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="MainController">
+<div class="flex-container">
+	<div class="flex-item" style="flex:0;"> HELLO1 </div>
+	<div class="flex-item" style="flex:1;"> HELLO2 </div>
+	{{news}}
+</div>
+
+<script type="text/javascript">
+	angular.module('mainApp',[]).controller('MainController',['$scope',function($scope){
+		$scope.news="Good morning all";
+}]);
+
+</script>
+</body>
+</html>
