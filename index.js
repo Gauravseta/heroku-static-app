@@ -14,4 +14,8 @@ app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname + '/views/about.html'));
 });
 
+app.get('/profiledata',function(req,res){
+  res.sendFile(path.join(__dirname+'/js/profile-data.js'));
+});
+
 app.listen(process.env.PORT || 8080);
