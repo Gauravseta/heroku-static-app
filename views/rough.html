@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SYNTAX</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+<style>
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+* {
+	box-sizing:border-box;
+}
+.block1
+{
+    background-color : red;
+    text-align:center;
+    overflow-x:auto;
+    flex:0 100%;
+
+    
+}
+.block2
+{
+    background-color : blue;
+    flex:0 100%;
+    overflow-wrap:break-word;
+    overflow-x:auto;
+   
+}
+
+.main {
+	height:100%;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	align-items:stretch;
+	
+}
+
+
+
+.block1-item{
+	width:auto;
+	height:auto;
+	background-color:cyan;
+	margin:5px;
+        overflow-wrap: break-word;
+	    overflow-x: auto;
+}
+
+
+@media only screen and (min-width:500px){
+
+	.block1
+{
+    
+    flex:0 50%;
+
+    
+}
+.block2
+{
+   
+    flex:0 50%;
+
+   
+}
+}
+</style>
+<script src="../node_modules/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="MainController">
+	<div class="main">
+	<div class="block1">
+		<div class="block1-item">jnjjjnjnororokrokrokejnjjjnjnororokrookejnjjokrokejnjjjnjnororokrojnjnookrokejnjjjnjnororokrororokroke</div>	
+		<div class="block1-item">jnjjjnjnororokrokrokejnjjjnjnororokrookejnjjokrokejnjjjnjnororokrojnjnookrokejnjjjnjnororokrororokroke</div>	
+		<div class="block1-item"></div>	
+	</div>
+	<div class="block2">jnjnjnjjnjnororokrokrokejnjjjnjnororokrookejnjjokr</div>
+
+	</div>
+<script type="text/javascript">
+	angular.module('mainApp',[]).controller('MainController',['$scope',function($scope){
+		$scope.news="Good morning all";
+}]);
+
+</script>
+</body>
+</html>
